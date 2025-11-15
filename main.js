@@ -117,6 +117,7 @@ function renderGraphView() {
 
         </div>
 
+           
         
     `;
     //<div id="course-details"></div>
@@ -371,11 +372,13 @@ function renderMatrixView() {
             </table>
 
             
+        </div>
+
+            
     `;
 }
 
 /* ---------------------------------------------
-
     <div class="mt-6 grid grid-cols-2 gap-4">
                 <div class="p-4 bg-blue-50 rounded-lg">
                     <h4 class="font-bold text-blue-900 mb-2">Total prerrequisitos directos</h4>
@@ -389,10 +392,6 @@ function renderMatrixView() {
                     </p>
                 </div>
             </div>
-
-        </div>
-
-
 
 
    ESTADÍSTICAS FINALES (FOOTER)
