@@ -100,8 +100,8 @@ function renderGraphView() {
             <p class="text-blue-900"><strong>Interactivo:</strong> Haz clic en cualquier curso.</p>
         </div>
 
-        <div class="relative bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg p-4"
-             style="height: 700px;">
+        <div class="relative bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg"
+             style="height: auto;">
             
             <div class="relative mx-auto" style="width: 800px; height: 600px;">
                 <svg id="graph-svg" width="800" height="600" class="absolute top-0 left-0">
@@ -112,15 +112,15 @@ function renderGraphView() {
                         </marker>
                     </defs>
                 </svg>
-                <div id="graph-nodes" class="absolute top-0 left-0 w-full h-full"></div>
+                <div id="graph-nodes" class="absolute top-6 left-0 w-full h-full"></div>
             </div>
 
         </div>
 
-           
+           <div id="course-details"></div>
         
     `;
-    //<div id="course-details"></div>
+    //
     drawGraph();
 }
 
@@ -272,6 +272,13 @@ function renderPropertiesView() {
 
             <h3 class="text-2xl font-bold text-gray-800 mb-4">Análisis de Propiedades</h3>
 
+            <div class="mt-6 p-4 bg-blue-50 rounded-lg border-l-4 border-blue-500">
+                <h4 class="font-bold text-blue-900 mb-2">Clasificación</h4>
+                <p class="text-blue-800">
+                    La relación es un <b>orden parcial estricto</b>.
+                </p>
+            </div>
+
             ${propertyCard(
                 "Reflexividad",
                 "NO REFLEXIVA",
@@ -308,12 +315,7 @@ function renderPropertiesView() {
                 "Permite dependencias indirectas."
             )}
 
-            <div class="mt-6 p-4 bg-blue-50 rounded-lg border-l-4 border-blue-500">
-                <h4 class="font-bold text-blue-900 mb-2">Clasificación</h4>
-                <p class="text-blue-800">
-                    La relación es un <b>orden parcial estricto</b>.
-                </p>
-            </div>
+            
         </div>
     `;
 }
@@ -374,12 +376,7 @@ function renderMatrixView() {
             
         </div>
 
-            
-    `;
-}
-
-/* ---------------------------------------------
-    <div class="mt-6 grid grid-cols-2 gap-4">
+        <div class="mt-6 grid grid-cols-2 gap-4">
                 <div class="p-4 bg-blue-50 rounded-lg">
                     <h4 class="font-bold text-blue-900 mb-2">Total prerrequisitos directos</h4>
                     <p class="text-3xl font-bold text-blue-700">${prerequisites.length}</p>
@@ -393,8 +390,12 @@ function renderMatrixView() {
                 </div>
             </div>
 
+            
+    `;
+}
 
-   ESTADÍSTICAS FINALES (FOOTER)
+/* ---------------------------------------------
+   ESTADÍSTICAS FINALES (Ya no estan en el footer - Están debajo del titulo)
 --------------------------------------------- */
 function renderFooter() {
     document.getElementById("footer-stats").innerHTML = `
