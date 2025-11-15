@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema de Prerrequisitos Académicos</title>
+
+    <!-- TailwindCSS CDN -->
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Feather Icons CDN -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body class="bg-gradient-to-br from-slate-50 to-slate-100">
+
+    <div class="w-full p-6 overflow-auto">
+
+        <div class="max-w-7xl mx-auto">
+
+            <!-- HEADER -->
+            <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+                <h1 class="text-3xl font-bold text-gray-800 mb-2">
+                    Sistema de Análisis de Prerrequisitos Académicos
+                </h1>
+                <p class="text-gray-600">
+                    Modelado mediante relaciones binarias y grafos dirigidos acíclicos
+                </p>
+            </div>
+
+            <!-- TABS -->
+            <div class="flex gap-2 mb-4">
+                <button data-tab="graph"
+                        class="tab-btn active-tab flex items-center gap-2 px-4 py-2 rounded-lg font-semibold">
+                    <i data-feather="git-branch"></i> Grafo
+                </button>
+
+                <!-- <button data-tab="properties"
+                        class="tab-btn flex items-center gap-2 px-4 py-2 rounded-lg font-semibold">
+                    <i data-feather="info"></i> Propiedades
+                </button> -->
+
+                <button data-tab="matrix"
+                        class="tab-btn flex items-center gap-2 px-4 py-2 rounded-lg font-semibold">
+                    <i data-feather="database"></i> Matriz
+                </button>
+            </div>
+
+            <!-- CONTENT -->
+            <div id="tab-content" class="bg-white rounded-lg shadow-lg p-6"></div>
+
+            <!-- FOOTER STATS -->
+            <!-- <div id="footer-stats" class="mt-6 grid grid-cols-3 gap-4"></div> -->
+
+        </div>
+    </div>
+
+    <script src="/discretas/main.js"></script>
+    <script>feather.replace();</script>
+
+</body>
+</html>
